@@ -8,9 +8,15 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.web.client.RestOperations;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
+import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+import org.springframework.security.oauth2.config.annotation.web.configuration.EnableResourceServer;
+import org.springframework.security.oauth2.config.annotation.web.configuration.EnableOAuth2Client;
 
 import java.util.TimeZone;
 
+@EnableWebSecurity
+@EnableResourceServer
+@EnableOAuth2Client
 @EnableEurekaClient
 @SpringBootApplication
 @ComponentScan({"io.pivotal.pal.tracker.timesheets", "io.pivotal.pal.tracker.restsupport"})
