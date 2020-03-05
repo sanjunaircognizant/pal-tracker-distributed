@@ -27,7 +27,6 @@ public class App {
         SpringApplication.run(App.class, args);
     }
 
-    @LoadBalanced
     @Bean
     ProjectClient projectClient(
         RestOperations restOperations,

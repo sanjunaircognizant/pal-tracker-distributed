@@ -29,7 +29,6 @@ public class App {
     }
 
     @Bean
-    @LoadBalanced
     ProjectClient projectClient(
         RestOperations restOperations,
         @Value("${registration.server.endpoint}") String registrationEndpoint
