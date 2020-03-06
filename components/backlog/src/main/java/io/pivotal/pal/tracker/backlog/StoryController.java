@@ -6,6 +6,7 @@ import io.pivotal.pal.tracker.backlog.data.StoryRecord;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
 
@@ -19,6 +20,7 @@ public class StoryController {
     private final StoryDataGateway gateway;
     private final ProjectClient client;
 
+    @Autowired
     public StoryController(StoryDataGateway gateway, ProjectClient client) {
         this.gateway = gateway;
         this.client = client;
