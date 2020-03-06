@@ -45,7 +45,7 @@ public class StoryController {
 
     private boolean projectIsActive(long projectId) {
         ProjectInfo project = client.getProject(projectId);
-        return project != null ;
+        return project != null && project.active;
     }
 
     private StoryFields mapToFields(StoryForm form) {
