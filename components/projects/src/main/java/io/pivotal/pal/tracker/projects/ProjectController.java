@@ -26,6 +26,7 @@ public class ProjectController {
     @PostMapping
     public ResponseEntity<ProjectInfo> create(@RequestBody ProjectForm form) {
         ProjectRecord record = gateway.create(formToFields(form));
+        System.out.println("Inside ProjectController create() : project = "+record);
         return new ResponseEntity<>(present(record), HttpStatus.CREATED);
     }
 

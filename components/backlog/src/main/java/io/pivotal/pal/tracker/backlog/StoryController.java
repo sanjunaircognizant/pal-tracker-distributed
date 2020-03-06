@@ -45,6 +45,7 @@ public class StoryController {
 
     private boolean projectIsActive(long projectId) {
         ProjectInfo project = client.getProject(projectId);
+        System.out.println("Inside projectIsActive() project = "+project);
         return project != null && project.active;
     }
 
