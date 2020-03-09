@@ -20,7 +20,6 @@ public class StoryController {
     private final StoryDataGateway gateway;
     private final ProjectClient client;
 
-    @Autowired
     public StoryController(StoryDataGateway gateway, ProjectClient client) {
         this.gateway = gateway;
         this.client = client;
