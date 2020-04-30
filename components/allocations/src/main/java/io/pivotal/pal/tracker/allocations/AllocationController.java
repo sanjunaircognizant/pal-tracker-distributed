@@ -49,7 +49,7 @@ public class AllocationController {
 
     private boolean projectIsActive(long projectId) {
         ProjectInfo project = client.getProject(projectId);
-
+        System.out.println("#DE5678: project : "+project);
         return project != null && project.active;
     }
 
